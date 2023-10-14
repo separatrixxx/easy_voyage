@@ -1,0 +1,122 @@
+.authForm {
+	display: grid;
+
+	width: 40%;
+	height: fit-content;
+	margin-top: 200px;
+	padding: 50px 100px;
+
+	opacity: 0.7;
+	border: 1px solid #0C2F26;
+	border-radius: 20px;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(12, 47, 38, 0.2);
+
+	box-shadow: 0 1px 40px 0 rgba(222, 255, 231, 0.2) inset, 0 4px 18px 0 rgba(147, 210, 146, 0.3) inset, 0 98px 100px -48px rgba(172, 255, 200, 0.3) inset, 0 -82px 68px -64px rgba(68, 144, 85, 0.3) inset, 0 7px 11px -4px #FFF inset, 0 39px 56px -36px rgba(255, 255, 255, 0.5) inset;
+	gap: 20px;
+	backdrop-filter: blur(50px);
+}
+
+.text {
+	margin-bottom: 20px;
+
+	font-weight: 600 !important;
+}
+
+.span {
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.span:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--second);
+}
+
+.setUserTypeDiv {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 20px;
+}
+
+.userTypeBtn {
+	padding: 20px 10px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--accent);
+	border: 1px solid var(--accent);
+	border-radius: 4px;
+	background: transparent;
+
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.userTypeBtn:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--accentDark);
+	border-color: var(--accentDark);
+}
+
+.active {
+	color: var(--white);
+	border-color: var(--second);
+	background: var(--second);
+}
+
+.active:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--white);
+	border-color: var(--second);
+
+	background: var(--secondDark);
+}
+
+@media (min-width: 1024px) {
+	.span:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--second);
+	}
+
+	.userTypeBtn:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--accentDark);
+		border-color: var(--accentDark);
+	}
+
+	.active:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--white);
+		border-color: var(--second);
+
+		background: var(--secondDark);
+	}
+}
+
+@media (max-width: 1024px) {
+	.authForm {
+		width: 50%;
+		padding: 30px 50px;
+	}
+}
+
+@media (max-width: 580px) {
+	.authForm {
+		width: 70%;
+		padding: 30px 40px;
+	}
+}
+
+@media (max-width: 320px) {
+	.authForm {
+		padding: 30px 20px;
+	}
+}

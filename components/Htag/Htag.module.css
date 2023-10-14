@@ -39,9 +39,10 @@
 }
 
 .xs {
-	font-size: 0.75rem;
-	font-weight: 400;
-	line-height: 1rem;
+	font-size: 13px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 21px;
 }
 
 .xxs {
@@ -50,9 +51,9 @@
 	line-height: 1rem;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 1024px) {
 	.xl {
-		font-size: 48px;
+		font-size: 44px;
 	}
 
 	.l {
@@ -62,14 +63,32 @@
 	.m {
 		font-size: 26px;
 	}
+}
+
+@media (max-width: 580px) {
+	.xl {
+		font-size: 32px;
+	}
+
+	.l {
+		font-size: 26px;
+	}
+
+	.m {
+		font-size: 22px;
+	}
 
 	.s {
 		font-size: 16px;
 	}
 
 	.xs {
-		font-size: 0.65rem;
-		font-weight: 400;
-		line-height: 1rem;
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 320px) {
+	.xl {
+		font-size: 30px;
 	}
 }

@@ -31,11 +31,6 @@
 	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
-.darkThemeModalContent {
-	border: 1px solid var(--darkTheme_light);
-	background: var(--dark);
-}
-
 @media (max-width: 580px) {
 	.modalContent {
 		padding: 10px;

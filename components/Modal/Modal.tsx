@@ -1,14 +1,10 @@
 import { ModalProps } from './Modal.props';
 import styles from './Modal.module.css';
 import { motion } from 'framer-motion';
-import { useSelector } from 'react-redux';
-import { AppState } from 'features/store/store';
 import cn from 'classnames';
 
 
 export const Modal = ({ active, setActive, children }: ModalProps): JSX.Element => {
-    const theme = useSelector((state: AppState) => state.theme.theme);
-
     const variants = {
         visible: {
             opacity: 1,
@@ -35,9 +31,7 @@ export const Modal = ({ active, setActive, children }: ModalProps): JSX.Element 
             initial={active ? 'visible' : 'hidden'}
             transition={{ duration: 0.15 }}
             animate={active ? 'visible' : 'hidden'}>
-            <motion.div className={cn(styles.modalContent, {
-                [styles.darkThemeModalContent]: theme === 'dark',
-            })} onClick={e => e.stopPropagation()}
+            <motion.div className={styles.modalContent} onClick={e => e.stopPropagation()}
                 variants={variantsModal}
                 initial={active ? 'visible' : 'hidden'}
                 transition={{ duration: 0.15 }}

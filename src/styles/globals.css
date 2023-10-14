@@ -48,10 +48,14 @@ a {
 :root {
 	--primary: #A8BD9E;
 	--second: #81937A;
-	--dark: #1F1F1F;
+	--secondDark: #6E7E68;
+	--accent: #7CB0A3;
+	--accentDark: #598F81;
+	--dark: #000;
 	--white: white;
 	--text: #0C2F26;
 	--textLight: #196250;
 	--background: #EEF4ED;
+	--error: #FF1500;
 	--font-family: 'Nunito Sans', sans-serif;
 }

@@ -1,6 +1,6 @@
 .header {
 	position: fixed;
-	z-index: 9999;
+	z-index: 0;
 
 	display: grid;
 	align-items: center;
@@ -37,14 +37,5 @@
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		color: var(--textLight) !important;
-	}
-}
-
-@media (max-width: 1024px) {
-	.header {
-		grid-template-columns: auto auto;
-		grid-template-areas:
-			". ."
-			"headerBlock headerBlock";
 	}
 }
