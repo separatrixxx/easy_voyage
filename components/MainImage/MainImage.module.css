@@ -1,0 +1,25 @@
+.mainImage {
+	display: grid;
+
+	width: 100%;
+	height: fit-content;
+	justify-items: center;
+}
+
+.imageDiv {
+	display: grid;
+	overflow: hidden;
+
+	width: 83%;
+	height: fit-content;
+	margin-top: 96px;
+
+	border-radius: 20px;
+
+	background: var(--primary);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+}

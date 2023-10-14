@@ -1,0 +1,50 @@
+.header {
+	position: fixed;
+	z-index: 9999;
+
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	padding: 18px 0 18px 0;
+
+	background: var(--primary);
+	grid-template-columns: 1fr auto 1fr;
+	justify-items: center;
+	grid-template-areas: ". headerBlock .";
+}
+
+.link {
+	transition-duration: 300ms;
+
+	color: var(--text);
+}
+
+.link:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--textLight);
+}
+
+.logo {
+	font-family: Playfair Display, sans-serif;
+	font-size: 32px !important;
+	font-weight: 600 !important;
+}
+
+@media (min-width: 1024px) {
+	.link:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--textLight) !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.header {
+		grid-template-columns: auto auto;
+		grid-template-areas:
+			". ."
+			"headerBlock headerBlock";
+	}
+}
