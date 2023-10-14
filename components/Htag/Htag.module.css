@@ -1,3 +1,4 @@
+.xxl,
 .xl,
 .l,
 .m,
@@ -8,6 +9,15 @@
 	margin: 0;
 
 	color: var(--dark);
+}
+
+.xxl {
+	letter-spacing: 4.6px;
+
+	font-size: 92px;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 115%;
 }
 
 .xl {
@@ -52,6 +62,10 @@
 }
 
 @media (max-width: 1024px) {
+	.xxl {
+		font-size: 50px;
+	}
+
 	.xl {
 		font-size: 44px;
 	}
@@ -66,6 +80,10 @@
 }
 
 @media (max-width: 580px) {
+	.xxl {
+		font-size: 30px;
+	}
+
 	.xl {
 		font-size: 32px;
 	}
@@ -88,7 +106,19 @@
 }
 
 @media (max-width: 320px) {
+	.xxl {
+		font-size: 20px;
+	}
+
 	.xl {
 		font-size: 30px;
+	}
+
+	.l {
+		font-size: 18px;
+	}
+
+	.m {
+		font-size: 14px;
 	}
 }

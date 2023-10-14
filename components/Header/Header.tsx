@@ -1,3 +1,4 @@
+import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
 import { Htag } from 'components/Htag/Htag';
 import Link from 'next/link';
@@ -11,9 +12,9 @@ import { setLocale } from 'helpers/locale.helper';
 import cn from 'classnames';
 
 
-export const Header = (): JSX.Element => {
+export const Header = ({ text, link }: HeaderProps): JSX.Element => {
     const router = useRouter();
-    
+
     const [open, setOpen] = useState<boolean>(false);
     const [lastScroll, setLastScroll] = useState<number>(0);
     const [flag, setFlag] = useState<boolean>(false);
@@ -74,8 +75,8 @@ export const Header = (): JSX.Element => {
             <Link href='/'>
                 <Htag tag='s' className={cn(styles.link, styles.logo)}>EV</Htag>
             </Link>
-            <Link href='/auth' className={styles.link}>
-                <Htag tag='s' className={styles.link}>{setLocale(router.locale).log_in}</Htag>
+            <Link href={link} className={styles.link}>
+                <Htag tag='s' className={styles.link}>{text}</Htag>
             </Link>
         </motion.header>
     );

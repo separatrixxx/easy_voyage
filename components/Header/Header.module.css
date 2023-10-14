@@ -1,6 +1,6 @@
 .header {
 	position: fixed;
-	z-index: 0;
+	z-index: 1;
 
 	display: grid;
 	align-items: center;

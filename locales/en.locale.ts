@@ -1,6 +1,7 @@
 export const en = {
     locale: "en",
     language: "English",
+    main_title: "EASY VOYAGE",
     error404: "Page not found, 404 error",
     error500: "Server failure, error 500",
     about: "About us",
@@ -32,4 +33,7 @@ export const en = {
     register_hotel: "Register your hotel",
     auth: "Auth",
     profile: "Profile",
+    personal_data: "Personal data",
+    edit_profile: "Edit profile",
+    platform_number_1: "platform №1 for improving the quality of recreation",
 };

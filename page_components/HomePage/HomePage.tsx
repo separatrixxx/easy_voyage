@@ -12,7 +12,7 @@ export const HomePage = (): JSX.Element => {
 
     return (
         <div className={styles.wrapper}>
-            <Header />
+            <Header text={setLocale(router.locale).log_in} link='/auth' />
             <MainImage />
             <Htag tag='xl' className={styles.title}>{setLocale(router.locale).touchpoint}</Htag>
             {/* <SideBlock side='left' image='/SideImage1.webp' title1={setLocale(router.locale).for_holidaymaker}

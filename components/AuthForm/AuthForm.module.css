@@ -39,65 +39,11 @@
 	gap: 20px;
 }
 
-.userTypeBtn {
-	padding: 20px 10px;
-
-	cursor: pointer;
-	transition-duration: 300ms;
-
-	color: var(--accent);
-	border: 1px solid var(--accent);
-	border-radius: 4px;
-	background: transparent;
-
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 20px;
-}
-
-.userTypeBtn:active {
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	color: var(--accentDark);
-	border-color: var(--accentDark);
-}
-
-.active {
-	color: var(--white);
-	border-color: var(--second);
-	background: var(--second);
-}
-
-.active:active {
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	color: var(--white);
-	border-color: var(--second);
-
-	background: var(--secondDark);
-}
-
 @media (min-width: 1024px) {
 	.span:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		color: var(--second);
-	}
-
-	.userTypeBtn:hover {
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-		color: var(--accentDark);
-		border-color: var(--accentDark);
-	}
-
-	.active:hover {
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-		color: var(--white);
-		border-color: var(--second);
-
-		background: var(--secondDark);
 	}
 }
 

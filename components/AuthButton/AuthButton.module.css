@@ -1,7 +1,7 @@
 .authButton {
 	width: fit-content;
 	height: fit-content;
-	padding: 17px;
+	padding: 20px 30px;
 
 	cursor: pointer;
 	transition-duration: 300ms;
@@ -40,5 +40,11 @@
 		padding: 10px 20px;
 
 		font-size: 18px;
+	}
+}
+
+@media (max-width: 320px) {
+	.authButton {
+		font-size: 14px !important;
 	}
 }

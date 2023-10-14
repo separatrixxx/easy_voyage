@@ -1,6 +1,7 @@
 export const ru = {
     locale: "ru",
     language: "Русский",
+    main_title: "EASY VOYAGE",
     error404: "Страница не найдена, ошибка 404",
     error500: "Нарушение работы сервера, ошибка 500",
     about: "О нас",
@@ -32,4 +33,7 @@ export const ru = {
     register_hotel: "Зарегистрировать отель",
     auth: "Авторизация",
     profile: "Профиль",
+    personal_data: "Личные данные",
+    edit_profile: "Релактировать профиль",
+    platform_number_1: "платформа №1 для повышения качества отдыха",
 };

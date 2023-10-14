@@ -1,0 +1,99 @@
+.profileBlock {
+	display: grid;
+
+	width: 70%;
+	height: fit-content;
+	padding: 80px;
+
+	border-radius: 20px;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%), rgba(12, 47, 38, 0.2);
+
+	box-shadow: 0 1px 40px 0 rgba(222, 255, 231, 0.2) inset, 0 4px 18px 0 rgba(147, 210, 146, 0.3) inset, 0 98px 100px -48px rgba(172, 255, 200, 0.3) inset, 0 -82px 68px -64px rgba(68, 144, 85, 0.3) inset, 0 7px 11px -4px #FFF inset, 0 39px 56px -36px rgba(255, 255, 255, 0.5) inset;
+	backdrop-filter: blur(50px);
+	justify-items: start;
+	gap: 40px;
+}
+
+.userInfoDiv {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 20px;
+}
+
+.imageDiv {
+	display: grid;
+	overflow: hidden;
+
+	width: 115px;
+	height: 115px;
+	height: fit-content;
+
+	border-radius: 9999px;
+
+	background: var(--primary);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+}
+
+.userInfo {
+	display: grid;
+	align-items: center;
+
+	width: fit-content;
+	justify-items: start;
+}
+
+.username {
+	font-weight: 500;
+}
+
+.email {
+	color: var(--gray);
+
+	font-weight: 400;
+}
+
+.switchButtonsDiv {
+	display: grid;
+
+	width: 50%;
+	grid-template-columns: auto auto;
+	gap: 20px;
+}
+
+@media (max-width: 1024px) {
+	.profileBlock {
+		width: 75%;
+		padding: 60px;
+	}
+
+	.switchButtonsDiv {
+		width: 70%;
+	}
+}
+
+@media (max-width: 580px) {
+	.profileBlock {
+		justify-items: center;
+
+		padding: 30px;
+	}
+
+	.userInfoDiv {
+		display: grid;
+		grid-template-columns: auto;
+		justify-items: center;
+	}
+
+	.switchButtonsDiv {
+		width: 100%;
+	}
+
+	.imageDiv {
+		width: 90px;
+		height: 90px;
+	}
+}

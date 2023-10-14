@@ -2,9 +2,13 @@ import styles from './AuthPage.module.css';
 import { AuthForm } from 'components/AuthForm/AuthForm';
 import { Header } from 'components/Header/Header';
 import { Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/router';
+import { setLocale } from 'helpers/locale.helper';
 
 
 export const AuthPage = (): JSX.Element => {
+    const router = useRouter();
+
     return (
         <>
             <Toaster
@@ -15,7 +19,7 @@ export const AuthPage = (): JSX.Element => {
                 }}
             />
             <div className={styles.wrapper}>
-                <Header />
+                <Header text={setLocale(router.locale).log_in} link='/auth' />
                 <AuthForm />
             </div>
         </>

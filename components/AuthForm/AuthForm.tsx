@@ -7,7 +7,7 @@ import { CheckAuthInterface } from 'interfaces/check_auth.interface';
 import { useState } from 'react';
 import { AuthButton } from 'components/AuthButton/AuthButton';
 import { checkLogin, checkRegistration } from 'helpers/check_auth.helper';
-import cn from 'classnames';
+import { SwitchButton } from 'components/SwitchButton/SwitchButton';
 
 
 export const AuthForm = (): JSX.Element => {
@@ -53,16 +53,10 @@ export const AuthForm = (): JSX.Element => {
 			<div className={styles.authForm}>
 				<Htag tag='xl' className={styles.text}>{setLocale(router.locale).registration}</Htag>
 				<div className={styles.setUserTypeDiv}>
-					<button className={cn(styles.userTypeBtn, {
-						[styles.active]: userType === 'guest',
-					})} onClick={() => setUserType('guest')}>
-						{setLocale(router.locale).book_vacation}
-					</button>
-					<button className={cn(styles.userTypeBtn, {
-						[styles.active]: userType === 'owner',
-					})} onClick={() => setUserType('owner')}>
-						{setLocale(router.locale).register_hotel}
-					</button>
+					<SwitchButton text={setLocale(router.locale).book_vacation}
+						isActive={userType === 'guest'} onClick={() => setUserType('guest')} />
+					<SwitchButton text={setLocale(router.locale).register_hotel}
+						isActive={userType === 'owner'} onClick={() => setUserType('owner')} />
 				</div>
 				<Input type='text' text={setLocale(router.locale).full_name}
 					value={username} error={error.errUsername} eye={false}
