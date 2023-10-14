@@ -30,4 +30,5 @@ export const en = {
     error_organization_name: "Enter your organization name",
     book_vacation: "Book a vacation",
     register_hotel: "Register your hotel",
+    auth: "Auth",
 };

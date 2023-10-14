@@ -13,10 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:title' content='Easy Voyage' />
         <meta property='og:description' content='Easy Voyage' />
         <meta charSet="utf-8" />
-        <link rel="icon" href="/next.svg" type='image/svg+xml' />
+        <link rel="icon" href="/logo.svg" type='image/svg+xml' />
       </Head>
       <Component {...pageProps} />
-  </>
-    
+    </>
+
   );
 }

@@ -30,4 +30,5 @@ export const ru = {
     error_organization_name: "Введите название организации",
     book_vacation: "Забронировать отдых",
     register_hotel: "Зарегистрировать отель",
+    auth: "Авторизация",
 };
