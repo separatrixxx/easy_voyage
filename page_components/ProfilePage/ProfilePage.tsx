@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { Toaster } from 'react-hot-toast';
 import { UserInterface } from 'interfaces/user.interface';
 import { ProfileBlock } from 'components/ProfileBlock/ProfileBlock';
+import { TabsBlock } from 'components/TabsBlock/TabsBlock';
 
 
 export const ProfilePage = (): JSX.Element => {
@@ -30,6 +31,7 @@ export const ProfilePage = (): JSX.Element => {
 				<Header text={setLocale(router.locale).profile} link='/profile' />
 				<Htag tag='xl' className={styles.title}>{setLocale(router.locale).profile}</Htag>
 				<ProfileBlock email={user.email} username={user.username} image={user.image} />
+				<TabsBlock />
 			</div>
 		</>
 	);

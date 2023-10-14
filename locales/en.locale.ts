@@ -36,4 +36,9 @@ export const en = {
     personal_data: "Personal data",
     edit_profile: "Edit profile",
     platform_number_1: "platform №1 for improving the quality of recreation",
+    tabs: "Tabs",
+    my_reservations: "My reservations",
+    ordered_services: "Ordered services",
+    settings: "Settings",
+    safety: "Safety",
 };

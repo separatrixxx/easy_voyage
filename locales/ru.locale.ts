@@ -36,4 +36,9 @@ export const ru = {
     personal_data: "Личные данные",
     edit_profile: "Релактировать профиль",
     platform_number_1: "платформа №1 для повышения качества отдыха",
+    tabs: "Вкладки",
+    my_reservations: "Мои бронирования",
+    ordered_services: "Заказанные услуги",
+    settings: "Настройки",
+    safety: "Безопасность",
 };
