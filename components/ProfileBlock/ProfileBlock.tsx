@@ -1,11 +1,9 @@
-import { AuthButtonProps } from './AuthButton.props';
-import styles from './AuthButton.module.css';
+import { ProfileBlockProps } from './ProfileBlock.props';
+import styles from './ProfileBlock.module.css';
 
 
-export const ProfileBlock = ({ text, onClick }: ProfileBlockProps): JSX.Element => {
+export const ProfileBlock = ({ email, username, image }: ProfileBlockProps): JSX.Element => {
 	return (
-		<button className={styles.authButton} onClick={onClick}>
-			{text}
-		</button>
+		<></>
 	);
 };
