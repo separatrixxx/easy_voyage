@@ -1,0 +1,12 @@
+.wrapper {
+	display: grid;
+
+	width: 100%;
+	justify-items: center;
+	gap: 40px;
+}
+
+.title {
+	margin-top: 96px;
+	font-family: Playfair Display, sans-serif;
+}

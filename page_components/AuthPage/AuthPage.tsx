@@ -1,5 +1,5 @@
-import { AuthForm } from 'components/AuthForm/AuthForm';
 import styles from './AuthPage.module.css';
+import { AuthForm } from 'components/AuthForm/AuthForm';
 import { Header } from 'components/Header/Header';
 import { Toaster } from 'react-hot-toast';
 

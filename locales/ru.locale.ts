@@ -31,4 +31,5 @@ export const ru = {
     book_vacation: "Забронировать отдых",
     register_hotel: "Зарегистрировать отель",
     auth: "Авторизация",
+    profile: "Профиль",
 };

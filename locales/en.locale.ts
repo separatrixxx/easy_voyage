@@ -31,4 +31,5 @@ export const en = {
     book_vacation: "Book a vacation",
     register_hotel: "Register your hotel",
     auth: "Auth",
+    profile: "Profile",
 };
