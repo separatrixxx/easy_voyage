@@ -40,7 +40,7 @@ export const AuthForm = (): JSX.Element => {
 				<Input type='password' text={setLocale(router.locale).password}
 					value={password} error={error.errPassword} eye={false}
 					onChange={(e) => setPassword(e.target.value)} />
-				<AuthButton text={setLocale(router.locale).log_in} onClick={() => checkLogin(email, password, router.locale, setError)} />
+				<AuthButton text={setLocale(router.locale).log_in} onClick={() => checkLogin(email, password, router, setError)} />
 				<Htag tag='xs'>{setLocale(router.locale).dont_have_account + ' '}
 					<span className={styles.span} onClick={() => setType('register')}>
 						{setLocale(router.locale).register}
@@ -72,7 +72,7 @@ export const AuthForm = (): JSX.Element => {
 				<Input type='password' text={setLocale(router.locale).password}
 					value={password} error={error.errPassword} eye={false}
 					onChange={(e) => setPassword(e.target.value)} />
-				<AuthButton text={setLocale(router.locale).register} onClick={() => checkRegistration(email, password, username, organizationName, userType, router.locale, setError)} />
+				<AuthButton text={setLocale(router.locale).register} onClick={() => checkRegistration(email, password, username, organizationName, userType, router, setError)} />
 				<Htag tag='xs'>{setLocale(router.locale).already_have_account + ' '}
 					<span className={styles.span} onClick={() => setType('login')}>
 						{setLocale(router.locale).log_in}
