@@ -1,5 +1,6 @@
 .userTypeBtn {
-	padding: 20px 10px;
+	height: fit-content;
+	padding: 20px 30px;
 
 	cursor: pointer;
 	transition-duration: 300ms;

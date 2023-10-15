@@ -18,7 +18,6 @@ export const Header = ({ text, link }: HeaderProps): JSX.Element => {
     const [open, setOpen] = useState<boolean>(false);
     const [lastScroll, setLastScroll] = useState<number>(0);
     const [flag, setFlag] = useState<boolean>(false);
-    const [hidden, setHidden] = useState<boolean>(false);
 
     const scrollPosition = useScrollY();
     const width = useResizeW();

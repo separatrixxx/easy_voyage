@@ -1,6 +1,6 @@
 import { TabProps } from './Tab.props';
-import { Htag } from 'components/Htag/Htag';
 import styles from './Tab.module.css';
+import { Htag } from 'components/Htag/Htag';
 import Arrow from './arrow.svg';
 import { motion } from 'framer-motion'
 

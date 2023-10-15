@@ -41,4 +41,7 @@ export const en = {
     ordered_services: "Ordered services",
     settings: "Settings",
     safety: "Safety",
+    our_partners: "Our Partners",
+    hotel: "Hotel",
+    address: "Address",
 };

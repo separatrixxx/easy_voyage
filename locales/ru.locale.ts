@@ -41,4 +41,7 @@ export const ru = {
     ordered_services: "Заказанные услуги",
     settings: "Настройки",
     safety: "Безопасность",
+    our_partners: "Наши партнёры",
+    hotel: "Отель",
+    address: "Адрес",
 };
