@@ -8,4 +8,5 @@
 - `start` - запуск собранного проекта
 
 # Серверная часть:
-	[Easy Voyage Server](https://github.com/wakanore/Voyage)
+
+[Easy Voyage Server](https://github.com/wakanore/Voyage)
