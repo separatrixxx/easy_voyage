@@ -21,6 +21,14 @@
 	background: var(--primary);
 }
 
+.button_loading {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+
+	cursor: not-allowed;
+}
+
 @media (min-width: 1024px) {
 	.authButton:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

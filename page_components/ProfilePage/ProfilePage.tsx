@@ -13,9 +13,13 @@ export const ProfilePage = (): JSX.Element => {
 	const router = useRouter();
 
 	const user: UserInterface = {
+		id: 0,
 		username: 'Александра Ерина',
 		email: 'alex355@untitledui.com',
 		image: 'UserImage.webp',
+		type: 'guest',
+		age: 20,
+		registrationTime: '16/11/2023',
 	}
 
 	return (
