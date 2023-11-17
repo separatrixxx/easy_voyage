@@ -1,0 +1,39 @@
+.changeAuthTypeDiv {
+	display: grid;
+	grid-template-columns: max-content min-content;
+	justify-items: center;
+	gap: 30px;
+
+	width: 100%;
+}
+
+.changeAuthType {
+	padding: 0 25px 15px 25px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--gray);
+	border-bottom: 1px solid var(--gray);
+}
+
+.changeAuthType:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--grayDarker);
+	border-color: var(--grayDarker);
+}
+
+.active {
+	color: var(--accent) !important;
+	border-color: var(--accent) !important;
+}
+
+@media (min-width: 1024px) {
+	.changeAuthType:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--grayDarker);
+		border-color: var(--grayDarker);
+	}
+}

@@ -8,7 +8,7 @@
 	width: 100%;
 	padding: 18px 0 18px 0;
 
-	background: var(--primary);
+	background: var(--background);
 	grid-template-columns: 1fr auto 1fr;
 	justify-items: center;
 	grid-template-areas: ". headerBlock .";
@@ -23,7 +23,7 @@
 .link:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--textLight);
+	color: var(--primary);
 }
 
 .logo {
@@ -36,6 +36,16 @@
 	.link:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--textLight) !important;
+		color: var(--primary) !important;
+	}
+}
+
+@media (max-width: 350px) {
+	.header {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.hiddenDiv {
+		display: none;
 	}
 }

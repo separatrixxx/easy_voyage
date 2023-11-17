@@ -1,25 +1,29 @@
 .input {
-	width: 90%;
-	height: 60px;
+	width: 400px;
+	height: 45px;
 	padding: 5px;
 	padding-left: 20px;
 
 	transition-duration: 300ms;
 
-	color: var(--second);
+	color: var(--primary);
 	border: 1px solid var(--white) !important;
-	border-radius: 12px;
+	border-radius: 7px;
 	outline: none;
-	background: var(--white);
+	background: var(--input);
 
 	font-size: 24px;
 	font-weight: 500;
 }
 
+.input:focus {
+	border: 1px solid var(--white) !important;
+}
+
 .input:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	border-color: var(--second) !important;
+	border-color: var(--accent) !important;
 }
 
 .error_input,
@@ -36,7 +40,7 @@
 	.input:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		border-color: var(--second);
+		border-color: var(--accent);
 	}
 }
 

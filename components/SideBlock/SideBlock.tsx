@@ -2,7 +2,7 @@ import { SideBlockProps } from './SideBlock.props';
 import styles from './SideBlock.module.css';
 import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
-import { SwitchButton } from 'components/SwitchButton/SwitchButton';
+import { SwitchButton } from 'components/MainPageComponents/SwitchButton/SwitchButton';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
 

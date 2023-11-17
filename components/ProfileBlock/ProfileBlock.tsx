@@ -2,7 +2,7 @@ import { ProfileBlockProps } from './ProfileBlock.props';
 import styles from './ProfileBlock.module.css';
 import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
-import { SwitchButton } from 'components/SwitchButton/SwitchButton';
+import { SwitchButton } from 'components/MainPageComponents/SwitchButton/SwitchButton';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { useState } from 'react';

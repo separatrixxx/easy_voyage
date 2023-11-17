@@ -6,16 +6,13 @@ import { useState } from 'react';
 import { useScrollY } from 'hooks/useScrollY';
 import { useResizeW } from 'hooks/useResize';
 import { motion } from 'framer-motion';
-import { BurgerMenu } from 'components/BurgerMenu/BurgenMenu';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
+import { ArrowButton } from 'components/ArrowButton/ArrowButton';
 import cn from 'classnames';
 
 
-export const Header = ({ text, link }: HeaderProps): JSX.Element => {
-    const router = useRouter();
-
-    const [open, setOpen] = useState<boolean>(false);
+export const Header = ({ text, link, setActive }: HeaderProps): JSX.Element => {
     const [lastScroll, setLastScroll] = useState<number>(0);
     const [flag, setFlag] = useState<boolean>(false);
 
@@ -23,7 +20,6 @@ export const Header = ({ text, link }: HeaderProps): JSX.Element => {
     const width = useResizeW();
 
     if (scrollPosition - lastScroll >= 200 && scrollPosition > lastScroll) {
-        setOpen(false);
         setFlag(true);
         setLastScroll(scrollPosition);
     } else if (scrollPosition < lastScroll) {
@@ -68,15 +64,13 @@ export const Header = ({ text, link }: HeaderProps): JSX.Element => {
             initial={flag ? 'hidden' : 'visible'}
             transition={{ duration: 0.3 }}
             animate={flag ? 'hidden' : 'visible'}>
-            <Link href='/about'>
-                <Htag tag='s' className={styles.link}>{setLocale(router.locale).about}</Htag>
-            </Link>
+            <div className={styles.hiddenDiv} />
             <Link href='/'>
-                <Htag tag='s' className={cn(styles.link, styles.logo)}>EV</Htag>
+                <Htag tag='m' className={cn(styles.link, styles.logo)}>EV</Htag>
             </Link>
-            <Link href={link} className={styles.link}>
-                <Htag tag='s' className={styles.link}>{text}</Htag>
-            </Link>
+            <ArrowButton link={link} setActive={setActive}>
+                {text}
+            </ArrowButton>
         </motion.header>
     );
 };

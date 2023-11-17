@@ -46,19 +46,21 @@ a {
 }
 
 :root {
-	--primary: #A8BD9E;
-	--second: #81937A;
+	--primary: #21C1FF;
+	--background: #FFFBFB;
+	--white: white;
+	--dark: #10122A;
+	--error: #FF1500;
+	--accent: #3374FF;
+	--second: #5F6332;
 	--secondDark: #6E7E68;
 	--third: #DFE4DE;
 	--fourth: #EEF4ED;
-	--accent: #7CB0A3;
 	--accentDark: #598F81;
-	--dark: #000;
-	--white: white;
-	--gray: #667085;
+	--gray: #B9B9B9;
+	--grayDarker: #949494;
+	--input: #F7F7FD;
 	--text: #0C2F26;
 	--textLight: #196250;
-	--background: #EEF4ED;
-	--error: #FF1500;
 	--font-family: 'Nunito Sans', sans-serif;
 }

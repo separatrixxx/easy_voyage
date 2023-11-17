@@ -10,6 +10,7 @@ export function checkLogin(email: string, password: string, router: any, setErro
     const checkLogin: CheckAuthInterface = {
         errEmail: false,
         errPassword: false,
+        errRepeatPassword: false,
         errUsername: false,
         errOrganizationName: false,
     };
@@ -21,6 +22,7 @@ export function checkLogin(email: string, password: string, router: any, setErro
             checkLogin.errEmail = true;
             { ToastError(setLocale(router.locale).error_email); }
         }
+
         if (password.length < 8) {
             checkLogin.errPassword = true;
             { ToastError(setLocale(router.locale).error_password); }
@@ -30,16 +32,17 @@ export function checkLogin(email: string, password: string, router: any, setErro
     setError(checkLogin);
 }
 
-export function checkRegistration(email: string, password: string, username: string, organizationName: string, userType: 'guest' | 'owner',
+export function checkRegistration(email: string, password: string, repeatPassword: string, username: string, organizationName: string, userType: 'guest' | 'owner',
     router: any, setError: (e: any) => void, setLoading: (e: any) => void) {
     const checkRegister: CheckAuthInterface = {
         errEmail: false,
         errPassword: false,
+        errRepeatPassword: false,
         errUsername: false,
         errOrganizationName: false,
     };
 
-    if (EMAIL_REGEXP.test(email) && password.length >= 8 && +username !== 0) {
+    if (EMAIL_REGEXP.test(email) && password.length >= 8 && +username !== 0 && password === repeatPassword) {
         if (userType === 'owner' && +organizationName === 0) {
             checkRegister.errOrganizationName = true;
             ToastError(setLocale(router.locale).error_organization_name);
@@ -51,13 +54,20 @@ export function checkRegistration(email: string, password: string, username: str
             checkRegister.errEmail = true;
             { ToastError(setLocale(router.locale).error_email); }
         }
+
         if (password.length < 8) {
             checkRegister.errPassword = true;
             { ToastError(setLocale(router.locale).error_password); }
         }
+
         if (+username === 0) {
             checkRegister.errUsername = true;
             { ToastError(setLocale(router.locale).error_name); }
+        }
+
+        if (password !== repeatPassword) {
+            checkRegister.errRepeatPassword = true;
+            { ToastError(setLocale(router.locale).password_mismatch); }
         }
     }
 
