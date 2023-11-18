@@ -34,7 +34,7 @@
 }
 
 .arrow > svg {
-	width: 15px;
+	width: 12px;
 	fill: var(--white);
 }
 
@@ -67,6 +67,9 @@
 @media (max-width: 580px) {
 	.button {
 		padding: 10px 24px;
+
+		font-size: 12px;
+		line-height: 16px;
 	}
 }
 

@@ -9,3 +9,19 @@
 .title {
 	font-family: Playfair Display, sans-serif;
 }
+
+.buttonsDiv {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 30px;
+}
+
+.forText {
+	font-weight: 700;
+}
+
+@media (max-width: 580px) {
+	.buttonsDiv {
+		gap: 10px;
+	}
+}

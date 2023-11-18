@@ -2,13 +2,14 @@ import styles from './AuthForm.module.css';
 import { Htag } from 'components/Htag/Htag';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
-import { Input } from 'components/Input/Input';
+import { Input } from 'components/Inputs/Input/Input';
 import { CheckAuthInterface } from 'interfaces/check_auth.interface';
 import { useState } from 'react';
 import { AuthButton } from 'components/AuthButton/AuthButton';
 import { checkLogin, checkRegistration } from 'helpers/check_auth.helper';
 import { SwitchButton } from 'components/MainPageComponents/SwitchButton/SwitchButton';
 import { ChangeAuthType } from '../ChangeAuthType/ChangeAuthType';
+import { InputWithEye } from 'components/Inputs/InputWithEye/InputWithEye';
 
 
 export const AuthForm = (): JSX.Element => {
@@ -34,6 +35,9 @@ export const AuthForm = (): JSX.Element => {
 
 	const [loading, setLoading] = useState<boolean>(false);
 
+	const [pswdType, setPswdType] = useState<'password' | 'text'>('password');
+	const [repeatPswdType, setRepeatPswdType] = useState<'password' | 'text'>('password');
+
 	if (type === 'login') {
 		return (
 			<div className={styles.authForm}>
@@ -42,9 +46,17 @@ export const AuthForm = (): JSX.Element => {
 					<Input type='email' text={setLocale(router.locale).email}
 						value={email} error={error.errEmail} eye={false}
 						onChange={(e) => setEmail(e.target.value)} />
-					<Input type='password' text={setLocale(router.locale).password}
-						value={password} error={error.errPassword} eye={false}
-						onChange={(e) => setPassword(e.target.value)} />
+					<div className={styles.remindDiv}>
+						<InputWithEye onMouseEnter={() => setPswdType('text')}
+							onMouseLeave={() => setPswdType('password')}>
+							<Input type={pswdType} text={setLocale(router.locale).password}
+								value={password} error={error.errPassword} eye={false}
+								onChange={(e) => setPassword(e.target.value)} />
+						</InputWithEye>
+						<Htag tag='s' className={styles.remind}>
+							{setLocale(router.locale).remind_password}
+						</Htag>
+					</div>
 					<AuthButton text={setLocale(router.locale).log_in} loading={loading}
 						onClick={() => checkLogin(email, password, router, setError, setLoading)} />
 				</div>
@@ -72,14 +84,27 @@ export const AuthForm = (): JSX.Element => {
 							value={organizationName} error={error.errOrganizationName} eye={false}
 							onChange={(e) => setOrganizationName(e.target.value)} />
 						: <></>}
-					<Input type='password' text={setLocale(router.locale).password}
-						value={password} error={error.errPassword} eye={false}
-						onChange={(e) => setPassword(e.target.value)} />
-					<Input type='password' text={setLocale(router.locale).repeat_password}
-						value={repeatPassword} error={error.errRepeatPassword} eye={false}
-						onChange={(e) => setRepeatPassword(e.target.value)} />
+					
+					<InputWithEye onMouseEnter={() => setPswdType('text')}
+						onMouseLeave={() => setPswdType('password')}>
+						<Input type={pswdType} text={setLocale(router.locale).password}
+							value={password} error={error.errPassword} eye={false}
+							onChange={(e) => setPassword(e.target.value)} />
+					</InputWithEye>
+					<InputWithEye onMouseEnter={() => setRepeatPswdType('text')}
+						onMouseLeave={() => setRepeatPswdType('password')}>
+						<Input type={repeatPswdType} text={setLocale(router.locale).repeat_password}
+							value={repeatPassword} error={error.errRepeatPassword} eye={false}
+							onChange={(e) => setRepeatPassword(e.target.value)} />
+					</InputWithEye>
 					<AuthButton text={setLocale(router.locale).register} loading={loading}
-						onClick={() => checkRegistration(email, password, repeatPassword, username, organizationName, userType, router, setError, setLoading)} />
+						onClick={() => checkRegistration(email, password, repeatPassword, username, organizationName,
+						userType, router, setError, setLoading)} />
+					<Htag tag='s' className={styles.terms}>
+						<span>{setLocale(router.locale).terms}</span>
+						{setLocale(router.locale).and}
+						<span>{setLocale(router.locale).privacy}</span>
+					</Htag>
 				</div>
 			</div>
 		);

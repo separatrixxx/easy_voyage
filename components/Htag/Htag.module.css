@@ -42,7 +42,7 @@
 }
 
 .s {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 400;
 	font-style: normal;
 	line-height: 100%;
@@ -71,11 +71,15 @@
 	}
 
 	.l {
-		font-size: 30px;
+		font-size: 28px;
 	}
 
 	.m {
 		font-size: 26px;
+	}
+
+	.s {
+		font-size: 18px;
 	}
 }
 
@@ -89,15 +93,15 @@
 	}
 
 	.l {
-		font-size: 26px;
-	}
-
-	.m {
 		font-size: 22px;
 	}
 
+	.m {
+		font-size: 20px;
+	}
+
 	.s {
-		font-size: 18px;
+		font-size: 14px;
 	}
 
 	.xs {
@@ -105,9 +109,9 @@
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
 	.l {
-		font-size: 22px;
+		font-size: 18px;
 	}
 }
 
@@ -126,5 +130,9 @@
 
 	.m {
 		font-size: 14px;
+	}
+
+	.s {
+		font-size: 10px;
 	}
 }

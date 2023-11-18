@@ -1,0 +1,43 @@
+.label {
+	position: relative;
+
+	display: grid;
+	align-items: center;
+
+	width: 400px;
+	height: fit-content;
+}
+
+.icon {
+	position: absolute;
+
+	right: 0;
+
+	width: 20px;
+	height: fit-content;
+
+	margin-right: -10px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	fill: var(--grayDarker);
+}
+
+.icon:hover {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	fill: var(--primary);
+}
+
+@media (max-width: 580px) {
+	.label {
+		width: 300px;
+	}
+}
+
+@media (max-width: 400px) {
+	.label {
+		width: 200px;
+	}
+}

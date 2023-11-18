@@ -6,8 +6,6 @@ import { useState } from 'react';
 import { useScrollY } from 'hooks/useScrollY';
 import { useResizeW } from 'hooks/useResize';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { setLocale } from 'helpers/locale.helper';
 import { ArrowButton } from 'components/ArrowButton/ArrowButton';
 import cn from 'classnames';
 

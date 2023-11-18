@@ -1,6 +1,6 @@
 .input {
 	width: 400px;
-	height: 45px;
+	height: 40px;
 	padding: 5px;
 	padding-left: 20px;
 
@@ -12,7 +12,7 @@
 	outline: none;
 	background: var(--input);
 
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 500;
 }
 
@@ -52,9 +52,16 @@
 
 @media (max-width: 580px) {
 	.input {
+		width: 300px;
 		height: 40px;
 		padding-left: 15px;
 
 		font-size: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.input {
+		width: 200px;
 	}
 }

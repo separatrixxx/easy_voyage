@@ -3,35 +3,103 @@
 
 	width: fit-content;
 	height: fit-content;
-	padding: 50px 40px;
+	padding: 35px 40px;
 	justify-items: left;
-	gap: 50px;
+	gap: 30px;
 }
 
 .buttonsDiv {
 	display: grid;
-	gap: 30px;
+	gap: 18px;
 
 	padding: 0 60px;
 }
 
 .setUserTypeDiv {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 }
 
+.remindDiv {
+	display: grid;
+
+	width: fit-content;
+	justify-items: right;
+	gap: 10px;
+}
+
+.remind {
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--primary);
+
+	font-size: 14px;
+}
+
+.remind:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.95);
+}
+
+.terms {
+	display: grid;
+
+	width: fit-content;
+
+	font-size: 14px;
+	gap: 5px;
+	grid-template-columns: auto min-content auto;
+	justify-items: center;
+	justify-self: center;
+}
+
+.terms > span {
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--primary);
+}
+
+.terms > span:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.95);
+}
+
 @media (min-width: 1024px) {
-	.span:hover {
+	.remind:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--second);
+		filter: brightness(0.95);
+	}
+
+	.terms > span:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.95);
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 650px) {
+	.buttonsDiv {
+		padding: 0 20px;
+	}
+}
+
+@media (max-width: 470px) {
 	.authForm {
-		padding: 40px 20px;
+		padding: 40px 10px;
 		gap: 20px;
+	}
+
+	.buttonsDiv {
+		padding: 0;
+	}
+
+	.setUserTypeDiv {
+		gap: 10px;
 	}
 }

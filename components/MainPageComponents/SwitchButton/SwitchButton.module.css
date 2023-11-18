@@ -1,6 +1,6 @@
 .userTypeBtn {
-	height: fit-content;
-	padding: 20px 30px;
+	height: 40px;
+	padding: 0 30px;
 
 	cursor: pointer;
 	transition-duration: 300ms;
@@ -43,5 +43,14 @@
 
 		font-size: 12px;
 		line-height: 16px;
+	}
+}
+
+@media (max-width: 400px) {
+	.userTypeBtn {
+		padding: 15px 0;
+
+		font-size: 8px;
+		line-height: 12px;
 	}
 }
