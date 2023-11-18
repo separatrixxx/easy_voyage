@@ -12,6 +12,7 @@
 	max-width: 250px;
 	height: fit-content;
 	gap: 10px;
+	justify-items: center;
 }
 
 .icon {
@@ -32,9 +33,50 @@
 .title {
 	margin-top: 10px;
 
+	text-align: center;
+
 	font-weight: 700;
 }
 
 .text {
+	text-align: center;
+
 	font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+	.infoBlock {
+		gap: 30px 40px;
+	}
+
+	.infoItem {
+		max-width: 200px;
+	}
+}
+
+@media (max-width: 720px) {
+	.infoBlock {
+		grid-template-columns: auto auto;
+	}
+}
+
+@media (max-width: 470px) {
+	.infoBlock {
+		gap: 20px;
+	}
+
+	.infoItem {
+		max-width: 150px;
+	}
+}
+
+@media (max-width: 350px) {
+	.infoBlock {
+		grid-template-columns: auto;
+		justify-items: center;
+	}
+
+	.infoItem {
+		max-width: 80%;
+	}
 }
