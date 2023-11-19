@@ -15,6 +15,7 @@
 	justify-items: center;
 
 	height: fit-content;
+	z-index: 1;
 }
 
 .swiperItem {

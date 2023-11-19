@@ -12,6 +12,7 @@ import { clientContent, partnerContent } from 'helpers/info_content.helper';
 import { MainInfoBlock } from 'components/MainPageComponents/MainInfoBlock/MainInfoBlock';
 import { ArrowButton } from 'components/ArrowButton/ArrowButton';
 import { DirectionsBlock } from 'components/MainPageComponents/DirectionsBlock/DirectionsBlock';
+import { Toaster } from 'react-hot-toast';
 
 
 export const HomePage = (): JSX.Element => {
@@ -24,6 +25,13 @@ export const HomePage = (): JSX.Element => {
 
     return (
         <>
+            <Toaster
+				position="top-center"
+				reverseOrder={true}
+				toastOptions={{
+					duration: 2000,
+				}}
+			/>
             <Modal active={active} setActive={setActive}>
                 <AuthForm />
             </Modal>
