@@ -3,3 +3,9 @@ export interface InfoBlockInterface {
     title: string,
     text: string,
 }
+
+export interface DirectionsBlockInterface {
+	image: string,
+    title: string,
+    text: string,
+}

@@ -11,6 +11,7 @@ import { Htag } from 'components/Htag/Htag';
 import { clientContent, partnerContent } from 'helpers/info_content.helper';
 import { MainInfoBlock } from 'components/MainPageComponents/MainInfoBlock/MainInfoBlock';
 import { ArrowButton } from 'components/ArrowButton/ArrowButton';
+import { DirectionsBlock } from 'components/MainPageComponents/DirectionsBlock/DirectionsBlock';
 
 
 export const HomePage = (): JSX.Element => {
@@ -36,6 +37,7 @@ export const HomePage = (): JSX.Element => {
                 <ArrowButton setActive={setActive}>
                     {setLocale(router.locale).book_vacation}
                 </ArrowButton>
+                <DirectionsBlock />
                 <Htag tag='l' className={styles.forText}>
                     {setLocale(router.locale).for_partners}
                 </Htag>

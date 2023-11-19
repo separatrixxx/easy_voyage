@@ -1,0 +1,29 @@
+.directionsBlock {
+	display: grid;
+
+	width: 100%;
+	height: fit-content;
+	padding: 30px 0;
+
+	background: var(--primary);
+	justify-items: center;
+	gap: 30px;
+}
+
+.swiper {
+	display: grid;
+	justify-items: center;
+
+	height: fit-content;
+}
+
+.swiperItem {
+	display: grid;
+	justify-items: center;
+}
+
+.title {
+	color: var(--white);
+
+	font-weight: 700;
+}

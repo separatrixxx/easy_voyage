@@ -81,4 +81,5 @@ export const en = {
         title3: "Multi-edit",
         text3: "Still have questions? Having difficulties with your booking or payment? Our support chat will not leave you in trouble!",
     },
+    popular_destinations: "Popular destinations",
 };
