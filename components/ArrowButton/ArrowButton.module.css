@@ -21,6 +21,12 @@
 	gap: 10px;
 }
 
+.buttonBorder {
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	background: none;
+}
+
 .button:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -36,6 +42,10 @@
 .arrow > svg {
 	width: 12px;
 	fill: var(--white);
+}
+
+.buttonBorder > .arrow > svg {
+	fill: var(--primary);
 }
 
 .button:active > span {

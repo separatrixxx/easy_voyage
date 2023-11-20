@@ -2,16 +2,14 @@ import { ProfileBlockProps } from './ProfileBlock.props';
 import styles from './ProfileBlock.module.css';
 import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
-import { SwitchButton } from 'components/MainPageComponents/SwitchButton/SwitchButton';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { ArrowButton } from 'components/ArrowButton/ArrowButton';
+import cn from 'classnames';
 
 
-export const ProfileBlock = ({ email, username, image }: ProfileBlockProps): JSX.Element => {
+export const ProfileBlock = ({ email, username, image, type }: ProfileBlockProps): JSX.Element => {
 	const router = useRouter();
-
-	const [type, setType] = useState<'data' | 'edit'>('data');
 
 	return (
 		<div className={styles.profileBlock}>
@@ -28,15 +26,24 @@ export const ProfileBlock = ({ email, username, image }: ProfileBlockProps): JSX
 					/>
 				</div>
 				<div className={styles.userInfo}>
-					<Htag tag='l' className={styles.username}>{username}</Htag>
-					<Htag tag='m' className={styles.email}>{email}</Htag>
+					<Htag tag='m' className={styles.username}>{username}</Htag>
+					<Htag tag='s' className={styles.email}>{email}</Htag>
 				</div>
 			</div>
-			<div className={styles.switchButtonsDiv}>
-				<SwitchButton text={setLocale(router.locale).personal_data}
-					isActive={type === 'data'} onClick={() => setType('data')} />
-				<SwitchButton text={setLocale(router.locale).edit_profile}
-					isActive={type === 'edit'} onClick={() => setType('edit')} />
+			<div className={cn(styles.buttonsDiv, {
+				[styles.buttonsDivOwner]: type === 'owner',
+			})}>
+				{
+					type === 'owner' ?
+						<ArrowButton>
+							{setLocale(router.locale).verification}
+						</ArrowButton>
+					:
+						<></>
+				}
+				<ArrowButton isBorder={true}>
+					{setLocale(router.locale).edit_profile}
+				</ArrowButton>
 			</div>
 		</div>
 	);

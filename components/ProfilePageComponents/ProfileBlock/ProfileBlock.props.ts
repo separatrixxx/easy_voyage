@@ -4,4 +4,5 @@ export interface ProfileBlockProps extends DetailedHTMLProps<HTMLAttributes<HTML
 	email: string,
 	username: string,
 	image: string,
+	type: 'guest' | 'owner',
 }

@@ -1,18 +1,21 @@
+import { TabsBlockProps } from './TabsBlock.props';
 import styles from './TabsBlock.module.css';
 import { Htag } from 'components/Htag/Htag';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { useState } from 'react';
-import { Tab } from 'components/Tab/Tab';
+import { Tab } from 'components/ProfilePageComponents/Tab/Tab';
 
 
-export const TabsBlock = (): JSX.Element => {
+export const TabsBlock = ({ type }: TabsBlockProps): JSX.Element => {
 	const router = useRouter();
 
 	const [flag1, setFlag1] = useState<boolean>(false);
 	const [flag2, setFlag2] = useState<boolean>(false);
 	const [flag3, setFlag3] = useState<boolean>(false);
 	const [flag4, setFlag4] = useState<boolean>(false);
+	const [flag5, setFlag5] = useState<boolean>(false);
+	const [flag6, setFlag6] = useState<boolean>(false);
 
 	const tab1 = {
 		title: setLocale(router.locale).my_reservations,
@@ -27,25 +30,38 @@ export const TabsBlock = (): JSX.Element => {
 	};
 
 	const tab3 = {
-		title: setLocale(router.locale).settings,
+		title: setLocale(router.locale).technical_support,
 		flag: flag3,
 		setFlag: setFlag3,
 	};
 
 	const tab4 = {
-		title: setLocale(router.locale).safety,
+		title: setLocale(router.locale).my_hotels,
 		flag: flag4,
 		setFlag: setFlag4,
 	};
 
-	const tabs = [tab1, tab2, tab3, tab4];
+	const tab5 = {
+		title: setLocale(router.locale).documents,
+		flag: flag5,
+		setFlag: setFlag5,
+	};
+
+	const tab6 = {
+		title: setLocale(router.locale).staff,
+		flag: flag6,
+		setFlag: setFlag6,
+	};
+
+	const tabsGuest = [tab1, tab2, tab3];
+	const tabsOwner = [tab4, tab5, tab6, tab3];
 
 	return (
 		<div className={styles.tabsBlock}>
 			<div className={styles.tabs}>
-				<Htag tag='l' className={styles.tabsTitle}>{setLocale(router.locale).tabs}</Htag>
-				<div className={styles.line} />
-				{tabs.map(t => (
+				{type === 'guest' ? tabsGuest.map(t => (
+					<Tab key={t.title} title={t.title} text={t.title} flag={t.flag} setFlag={t.setFlag} />
+				)) : tabsOwner.map(t => (
 					<Tab key={t.title} title={t.title} text={t.title} flag={t.flag} setFlag={t.setFlag} />
 				))}
 			</div>

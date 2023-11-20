@@ -6,7 +6,6 @@
 	margin-bottom: 40px;
 	padding: 80px 0;
 
-	background: var(--third);
 	justify-items: center;
 }
 
@@ -20,12 +19,12 @@
 .tabsTitle {
 	margin-bottom: 20px;
 
-	font-family: Playfair Display, sans-serif;
+	color: var(--primary) !important;
 }
 
 .line {
 	width: 100%;
 	height: 2px;
 
-	background: var(--fourth);
+	background: var(--primary);
 }
