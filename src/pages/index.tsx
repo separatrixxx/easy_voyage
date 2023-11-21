@@ -1,10 +1,10 @@
-import { HomePage } from "page_components/HomePage/HomePage";
+import { MainPage } from "page_components/MainPage/MainPage";
 
 
-function Home(): JSX.Element {
+function Main(): JSX.Element {
   return (
-    <HomePage />
+    <MainPage />
   );
 }
 
-export default Home;
+export default Main;

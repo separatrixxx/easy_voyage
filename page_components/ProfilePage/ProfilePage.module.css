@@ -11,3 +11,10 @@
 
 	font-family: Playfair Display, sans-serif;
 }
+
+@media (max-width: 1024px) {
+	.wrapper {
+		display: grid;
+		gap: 30px;
+	}
+}

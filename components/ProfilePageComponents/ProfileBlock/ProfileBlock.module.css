@@ -6,7 +6,7 @@
 
 	justify-items: start;
 	gap: 40px;
-	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .userInfoDiv {
@@ -57,17 +57,19 @@
 
 	width: 50%;
 	grid-template-columns: auto;
+	justify-items: center;
 	gap: 20px;
 }
 
 .buttonsDivOwner {
+	width: max-content;
 	grid-template-columns: auto auto;
 }
 
 @media (max-width: 1024px) {
 	.profileBlock {
 		width: 75%;
-		padding: 60px;
+		margin-top: 40px;
 	}
 
 	.switchButtonsDiv {
@@ -78,8 +80,6 @@
 @media (max-width: 580px) {
 	.profileBlock {
 		justify-items: center;
-
-		padding: 30px;
 	}
 
 	.userInfoDiv {

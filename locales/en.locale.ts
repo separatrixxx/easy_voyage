@@ -52,6 +52,7 @@ export const en = {
     privacy: "Privacy",
     book_vacation: "Book a vacation",
     register_hotel: "Register ypur hotel",
+    book_hotel: "Book a hotel",
     company: "Company",
     about: "About us",
     partners: "Partners",
