@@ -1,0 +1,7 @@
+.bookForm {
+	display: grid;
+
+	width: fit-content;
+	height: fit-content;
+	gap: 20px;
+}

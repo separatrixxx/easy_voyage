@@ -1,6 +1,5 @@
 import { InputProps } from './Input.props';
 import styles from './Input.module.css';
-import { Htag } from 'components/Htag/Htag';
 import cn from 'classnames';
 
 
@@ -37,8 +36,19 @@ export const Input = ({ type, text, value, error, eye, onChange }: InputProps): 
 				value={value}
 				onChange={onChange}
 				type="text"
-				name="name"
-				aria-label="name" />;
+				name="text"
+				aria-label="text" />;
+		case 'number':
+			return <input className={cn(styles.input, {
+				[styles.error_input]: error,
+				[styles.eye_input]: eye,
+			})}
+				placeholder={text}
+				value={value}
+				onChange={onChange}
+				type="number"
+				name="number"
+				aria-label="number" />;
 		default:
 			return <></>;
 	}

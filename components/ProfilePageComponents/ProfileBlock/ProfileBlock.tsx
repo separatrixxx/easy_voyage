@@ -28,6 +28,12 @@ export const ProfileBlock = ({ email, username, image, type }: ProfileBlockProps
 				<div className={styles.userInfo}>
 					<Htag tag='m' className={styles.username}>{username}</Htag>
 					<Htag tag='s' className={styles.email}>{email}</Htag>
+					<Htag tag='xs' className={styles.logOut} onClick={() => {
+						localStorage.clear();
+						router.push('/');
+					}}>
+						{setLocale(router.locale).log_out}
+					</Htag>
 				</div>
 			</div>
 			<div className={cn(styles.buttonsDiv, {
@@ -38,7 +44,7 @@ export const ProfileBlock = ({ email, username, image, type }: ProfileBlockProps
 						<ArrowButton>
 							{setLocale(router.locale).verification}
 						</ArrowButton>
-					:
+						:
 						<></>
 				}
 				<ArrowButton isBorder={true}>

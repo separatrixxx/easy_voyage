@@ -1,10 +1,10 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 export interface InputProps extends DetailedHTMLProps<HTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-	type: 'email' | 'password' | 'text',
+	type: 'email' | 'password' | 'text' | 'number',
 	text: string,
-	value: string,
-	error: boolean,
+	value: string | number,
+	error?: boolean,
 	eye: boolean,
 	onChange: (e: any) => void,
 }

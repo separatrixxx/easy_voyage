@@ -87,4 +87,9 @@ export const ru = {
     popular_destinations: "Популярные направления",
     owner: "Владелец",
     to_main: "На главную",
+    log_out: "Выйти",
+    city: "Город",
+    adults: "Взрослые",
+    children: "Дети",
+    find_a_hotel: "Найти отель",
 };

@@ -87,4 +87,9 @@ export const en = {
     popular_destinations: "Popular destinations",
     owner: "Owner",
     to_main: "To main",
+    log_out: "Log Out",
+    city: "City",
+    adults: "Adults",
+    children: "Children",
+    find_a_hotel: "Find a hotel",
 };

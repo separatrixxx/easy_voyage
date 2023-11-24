@@ -5,16 +5,16 @@ import { Htag } from 'components/Htag/Htag';
 
 
 export const ProfileHeader = (): JSX.Element => {
-	const router = useRouter();
+    const router = useRouter();
 
-	return (
-		<div className={styles.profileHeader}>
-            <Htag tag='s' className={styles.profileHeaderText}>
+    return (
+        <div className={styles.profileHeader}>
+            <Htag tag='s' className={styles.profileHeaderText} onClick={() => router.push('/home')}>
                 {setLocale(router.locale).to_main}
             </Htag>
             <Htag tag='s' className={styles.profileHeaderText}>
                 {setLocale(router.locale).help}
             </Htag>
         </div>
-	);
+    );
 };

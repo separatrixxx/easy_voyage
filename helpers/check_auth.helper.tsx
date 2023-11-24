@@ -47,7 +47,7 @@ export function checkRegistration(email: string, password: string, repeatPasswor
             checkRegister.errOrganizationName = true;
             ToastError(setLocale(router.locale).error_organization_name);
         } else {
-            registerUser(email, password, router, setLoading)
+            registerUser(email, password, username, userType, router, setLoading)
         }
     } else {
         if (!EMAIL_REGEXP.test(email)) {

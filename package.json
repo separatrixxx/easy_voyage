@@ -27,6 +27,7 @@
     "axios": "^1.5.1",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
+    "react-calendar": "^4.6.1",
     "react-hot-toast": "^2.4.1",
     "stylelint": "^13.0.0",
     "stylelint-config-standard": "^19.0.0",

@@ -1,0 +1,51 @@
+.bookHotelBlock {
+	display: grid;
+
+	width: 60%;
+	height: fit-content;
+	grid-template-columns: 50% 50%;
+	justify-items: center;
+	grid-template-areas: ". a";
+}
+
+.calendar {
+	width: 427px;
+
+	border-color: var(--primary);
+	border-radius: 7px;
+	grid-area: a;
+}
+
+@media (max-width: 1500px) {
+	.bookHotelBlock {
+		width: 85%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.bookHotelBlock {
+		width: 90%;
+	}
+}
+
+@media (max-width: 950px) {
+	.bookHotelBlock {
+		grid-template-columns: auto;
+		gap: 60px;
+		grid-template-areas:
+			"a"
+			".";
+	}
+}
+
+@media (max-width: 580px) {
+	.calendar {
+		width: 322px;
+	}
+}
+
+@media (max-width: 400px) {
+	.calendar {
+		width: 222px;
+	}
+}

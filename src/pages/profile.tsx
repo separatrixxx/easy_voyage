@@ -3,29 +3,47 @@ import Head from 'next/head';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { UserInterface } from "interfaces/user.interface";
+import { useEffect, useState } from 'react';
+import { pageHelper } from 'helpers/pages.helper';
 
 
 function Profile(): JSX.Element {
 	const router = useRouter();
 
+	const [username, setUsername] = useState<string>('');
+	const [email, setEmail] = useState<string>('');
+	const [userType, setUserType] = useState<'guest' | 'owner'>('guest');
+
 	const user: UserInterface = {
 		id: 0,
-		username: 'Александра Ерина',
-		email: 'alex355@untitledui.com',
+		username: username,
+		email: email,
 		image: '/UserImage.webp',
-		type: 'guest',
+		type: userType,
 		age: 20,
 		registrationTime: '16/11/2023',
-	}
+	};
 
-	return (
-		<>
-			<Head>
-				<title>{'Easy Voyage - ' + setLocale(router.locale).profile}</title>
-			</Head>
-			<ProfilePage user={user} type="owner" />
-		</>
-	);
+	const [isAuth, setIsAuth] = useState<boolean>(false);
+
+	useEffect(() => {
+		pageHelper(router, setIsAuth, setUsername, setEmail, setUserType);
+	}, [router]);
+
+	if (isAuth) {
+		return (
+			<>
+				<Head>
+					<title>{'Easy Voyage - ' + setLocale(router.locale).profile}</title>
+				</Head>
+				<ProfilePage user={user} type={userType} />
+			</>
+		);
+	} else {
+		return (
+			<></>
+		);
+	}
 }
 
 export default Profile;
