@@ -19,7 +19,7 @@ export const DirectionsItem = ({ image, title, text }: DirectionsItemProps): JSX
 				/>
 			</div>
 			<Htag tag='s' className={styles.title}>{title}</Htag>
-			<Htag tag='xs' className={styles.text}>{text}</Htag>
+			{/* <Htag tag='xs' className={styles.text}>{text}</Htag> */}
         </div>
 	);
 };
