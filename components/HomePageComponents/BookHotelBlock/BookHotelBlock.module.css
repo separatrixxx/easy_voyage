@@ -11,7 +11,7 @@
 .calendar {
 	width: 427px;
 
-	border-color: var(--primary);
+	border-color: var(--primary) !important;
 	border-radius: 7px;
 	grid-area: a;
 }

@@ -25,9 +25,14 @@ body {
 	height: 9px;
 }
 
+.react-calendar__month-view__days__day--weekend {
+	color: var(--error) !important;
+}
+
 .react-calendar__navigation,
 .react-calendar__tile--active,
 .react-calendar__navigation__label {
+	color: var(--white) !important;
 	background: var(--primary) !important;
 }
 
@@ -39,12 +44,13 @@ body {
 	border-radius: 5px;
 }
 
-.react-calendar__month-view__days__day--weekend {
-	color: var(--error) !important;
-}
-
 .react-calendar__month-view__days__day--neighboringMonth {
 	color: var(--gray) !important;
+}
+
+.react-calendar__tile--now {
+	color: var(--white) !important;
+	background: var(--accent) !important;
 }
 
 @media (max-width: 480px) {
