@@ -6,7 +6,7 @@ function PageServerFailure(): JSX.Element {
 	return (
 		<>
 			<Head>
-				<title>{'tBench - 500'}</title>
+				<title>{'Easy Voyage - 500'}</title>
 			</Head>
 			<ErrorPage error={500} />
 		</>

@@ -7,7 +7,7 @@ function PageNotFound(): JSX.Element {
 	return (
 		<>
 			<Head>
-				<title>{'tBench - 404'}</title>
+				<title>{'Easy Voyage - 404'}</title>
 			</Head>
 			<ErrorPage error={404} />
 		</>
